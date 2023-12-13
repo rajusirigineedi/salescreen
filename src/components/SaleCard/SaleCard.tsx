@@ -1,13 +1,65 @@
+import { SaleCardItem } from "../SaleCardItem/SaleCardItem";
 import "./SaleCard.css";
 import { SaleCardProps } from "./SaleCard.types";
 
-export const SaleCard = ({ type = "block", ...props }: SaleCardProps) => {
-  const { items, marginTop, height } = props;
-  if (type === "block")
-    return (
-      <div style={{ height, marginTop, backgroundColor: "green" }}>Block</div>
-    );
-  if (type === "carousel") return <div>Carousal</div>;
-  if (type === "draggable") return <div>Draggable</div>;
-  return <div>No Content</div>;
+export const SaleCard = (props: SaleCardProps) => {
+  const { type } = props;
+  if (type === "block") return <BlockSaleCard {...props} />;
+  if (type === "carousel") return <CarouselSaleCard {...props} />;
+  if (type === "draggable") return <DraggableSaleCard {...props} />;
+  return null;
+};
+
+const BlockSaleCard = ({ items, marginTop, ...props }: SaleCardProps) => {
+  const { height } = props;
+
+  return (
+    <div
+      className="salecard"
+      style={{
+        height,
+        marginTop,
+      }}
+    >
+      {items.map((item) => (
+        <SaleCardItem key={item.id} {...item} {...props} />
+      ))}
+    </div>
+  );
+};
+
+const CarouselSaleCard = ({ items, marginTop, ...props }: SaleCardProps) => {
+  const { height } = props;
+
+  return (
+    <div
+      className="salecard carousel"
+      style={{
+        height,
+        marginTop,
+      }}
+    >
+      {items.map((item) => (
+        <SaleCardItem key={item.id} {...item} {...props} />
+      ))}
+    </div>
+  );
+};
+
+const DraggableSaleCard = ({ items, marginTop, ...props }: SaleCardProps) => {
+  const { height } = props;
+
+  return (
+    <div
+      className="salecard draggable"
+      style={{
+        height,
+        marginTop,
+      }}
+    >
+      {items.map((item) => (
+        <SaleCardItem key={item.id} {...item} {...props} />
+      ))}
+    </div>
+  );
 };

@@ -17,7 +17,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Block: Story = {
   args: {
+    id: 1,
     imageUrl:
       "http://res.cloudinary.com/dr8pyxxqb/image/upload/v1693739369/ed3vqzcf7l8higzyx0ur.avif",
+    actualUrl: "/home",
+    type: "block",
+    height: 128,
   },
 };

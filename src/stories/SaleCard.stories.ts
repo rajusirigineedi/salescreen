@@ -18,9 +18,85 @@ type Story = StoryObj<typeof meta>;
 
 export const Block: Story = {
   args: {
-    items: [{ imageUrl: "someurl", actualUrl: "someotherurl" }],
+    id: 1,
+    items: [
+      {
+        id: 1,
+        imageUrl:
+          "http://res.cloudinary.com/dr8pyxxqb/image/upload/v1693739369/ed3vqzcf7l8higzyx0ur.avif",
+        actualUrl: "/home",
+      },
+      {
+        id: 2,
+        imageUrl:
+          "http://res.cloudinary.com/dr8pyxxqb/image/upload/v1693739369/ed3vqzcf7l8higzyx0ur.avif",
+        actualUrl: "/home",
+      },
+      {
+        id: 3,
+        imageUrl:
+          "http://res.cloudinary.com/dr8pyxxqb/image/upload/v1693739369/ed3vqzcf7l8higzyx0ur.avif",
+        actualUrl: "/home",
+      },
+    ],
     marginTop: 0,
     type: "block",
+    height: 64,
+  },
+};
+export const BlockCarousel: Story = {
+  args: {
+    id: 1,
+    items: [
+      {
+        id: 1,
+        imageUrl:
+          "http://res.cloudinary.com/dr8pyxxqb/image/upload/v1693739369/ed3vqzcf7l8higzyx0ur.avif",
+        actualUrl: "/home",
+      },
+      {
+        id: 2,
+        imageUrl:
+          "http://res.cloudinary.com/dr8pyxxqb/image/upload/v1693739369/ed3vqzcf7l8higzyx0ur.avif",
+        actualUrl: "/home",
+      },
+      {
+        id: 3,
+        imageUrl:
+          "http://res.cloudinary.com/dr8pyxxqb/image/upload/v1693739369/ed3vqzcf7l8higzyx0ur.avif",
+        actualUrl: "/home",
+      },
+    ],
+    marginTop: 0,
+    type: "carousel",
+    height: 190,
+  },
+};
+export const BlockDraggable: Story = {
+  args: {
+    id: 1,
+    items: [
+      {
+        id: 1,
+        imageUrl:
+          "http://res.cloudinary.com/dr8pyxxqb/image/upload/v1693739369/ed3vqzcf7l8higzyx0ur.avif",
+        actualUrl: "/home",
+      },
+      {
+        id: 2,
+        imageUrl:
+          "http://res.cloudinary.com/dr8pyxxqb/image/upload/v1693739369/ed3vqzcf7l8higzyx0ur.avif",
+        actualUrl: "/home",
+      },
+      {
+        id: 3,
+        imageUrl:
+          "http://res.cloudinary.com/dr8pyxxqb/image/upload/v1693739369/ed3vqzcf7l8higzyx0ur.avif",
+        actualUrl: "/home",
+      },
+    ],
+    marginTop: 0,
+    type: "draggable",
     height: 96,
   },
 };

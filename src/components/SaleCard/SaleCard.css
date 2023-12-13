@@ -1,0 +1,14 @@
+.salecard {
+  display: flex;
+  width: 100vw;
+  overflow-x: scroll;
+  align-items: center;
+  background-color: green;
+}
+
+.salecard.carousel {
+  overflow: hidden;
+}
+
+.salecard.draggable {
+}
