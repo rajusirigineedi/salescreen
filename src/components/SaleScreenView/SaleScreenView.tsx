@@ -1,4 +1,3 @@
-import React from "react";
 import { SaleScreenViewProps } from "./SaleScreenView.types";
 import "./SaleScreenView.css";
 import { SaleCard } from "../SaleCard/SaleCard";

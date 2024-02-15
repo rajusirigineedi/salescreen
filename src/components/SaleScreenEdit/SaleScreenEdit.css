@@ -1,0 +1,28 @@
+.salescreen-edit {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.preview-pane {
+  background-color: green;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.editor-pane {
+  background-color: yellow;
+  flex: 1;
+}
+
+.preview-pane .salecard {
+  width: 70vw;
+}
+
+.preview-pane .salecarditem-container.carousel {
+  width: 70vw;
+}
+
+.preview-pane .salecarditem-container.draggable {
+  width: 35vw;
+}
